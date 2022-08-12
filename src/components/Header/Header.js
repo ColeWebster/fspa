@@ -1,5 +1,5 @@
 import Logo from "./fspa.jpg";
-import "./style.css"
+import "./style.css";
 
 export default function Header() {
   return (
