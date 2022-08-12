@@ -1,22 +1,33 @@
-import Navbar from "react-bootstrap/Navbar";
-import Container from "react-bootstrap/Container";
-import Nav from 'react-bootstrap/Nav';
-import logo from "../assets/fspa.jpg";
+import NavDropdown from "react-bootstrap/Nav";
+import Nav from "react-bootstrap/Nav";
 
-
-function BasicExample() {
+export default function Header() {
+  const handleSelect = (eventKey) => alert(`selected ${eventKey}`);
+ 
   return (
-    <Navbar bg="dark" variant="dark">
-        <Container>
-          <img src={logo} className="header_logo" />
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
+    <Nav variant="pills" activeKey="1" onSelect={handleSelect}>
+      <Nav.Item>
+        <Nav.Link eventKey="1" href="#/home">
+          NavLink 1 content
+        </Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link eventKey="2" title="Item">
+          NavLink 2 content
+        </Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link eventKey="3" disabled>
+          NavLink 3 content
+        </Nav.Link>
+      </Nav.Item>
+      <NavDropdown title="Dropdown" id="nav-dropdown">
+        <NavDropdown.Item eventKey="4.1">Action</NavDropdown.Item>
+        <NavDropdown.Item eventKey="4.2">Another action</NavDropdown.Item>
+        <NavDropdown.Item eventKey="4.3">Something else here</NavDropdown.Item>
+        <NavDropdown.Divider />
+        <NavDropdown.Item eventKey="4.4">Separated link</NavDropdown.Item>
+      </NavDropdown>
+    </Nav>
   );
 }
-
-export default BasicExample;
