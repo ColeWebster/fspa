@@ -1,0 +1,11 @@
+
+
+.header {
+    max-height: 600px;
+    background: green;
+}
+
+.headerLogo {
+    max-height: 300px;
+    max-width: 500px;
+}
