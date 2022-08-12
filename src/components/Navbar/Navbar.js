@@ -15,6 +15,7 @@ export default function Navbar() {
           <Dropdown.Menu>
             <Dropdown.Item>Board</Dropdown.Item>
             <Dropdown.Item>Districts</Dropdown.Item>
+            <Dropdown.Item>Contact Us</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
         <Dropdown as={NavItem}>
