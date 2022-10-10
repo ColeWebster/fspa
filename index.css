@@ -55,3 +55,7 @@ ul.horizontal-list li {
 ul.horizontal-list li:not(:last-child) {
   border-right: 1px solid white;
 }
+
+.flex-container {
+    display: flex;
+}
